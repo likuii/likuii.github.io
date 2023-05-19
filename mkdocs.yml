@@ -1,0 +1,131 @@
+site_name: 知识文档
+
+site_url: https://www.likui.info/wiki/site
+
+theme:
+    name: mkdocs
+    locale: en
+    analytics: {gtag: 'G-274394082'}
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - django
+
+nav:
+    - 主页: index.md
+    - 开始: getting-started.md
+    - 用户手册: 
+        - Install: user-guide/installation.md
+        - Theme: user-guide/choosing-your-theme.md
+        - Customizing: user-guide/customizing-your-theme.md
+        - Localizing: user-guide/localizing-your-theme.md
+        - Configuration: user-guide/configuration.md
+        - Cli: user-guide/cli.md
+        - Deploying: user-guide/deploying-your-docs.md
+        - Writing: user-guide/writing-your-docs.md
+        - README: user-guide/README.md
+    - 开发指南: 
+        - API: dev-guide/api.md
+        - Plugins: dev-guide/plugins.md
+        - Themes: dev-guide/themes.md
+        - Translations: dev-guide/translations.md
+        - README: dev-guide/README.md
+    - PPT:
+        - ppt: ppt/matlab.md
+    - CS:
+        - 目录: cs/目录.md
+        - 必学工具: cs/必学工具.md
+        - 好书推荐: cs/好书推荐.md
+        - 数学基础: cs/数学基础.md
+        - 数学进阶: cs/数学进阶.md
+        - 编程入门: cs/编程入门.md
+        - 电子基础: cs/电子基础.md
+        - 数据结构与算法: cs/数据结构与算法.md
+    - 阅读:
+        - Reading: read/Reading.md
+        - Books: read/Books.md
+    - 关于:
+        - About: about/about.md
+       
+extra_css:
+    - css/extra.css
+
+extra_javascript:
+    #- https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs
+    #- js/markmap-d3.js
+    #- js/markmap-lib.js
+    #- js/markmap-view.js
+markdown_extensions:
+    - toc:
+        permalink: 
+    - attr_list
+    - def_list
+    - tables
+    - pymdownx.highlight:
+        use_pygments: false
+    - pymdownx.snippets
+    - pymdownx.superfences
+    - callouts
+    - mdx_gh_links:
+        user: mkdocs
+        repo: mkdocs
+    - mkdocs-click
+plugins:
+  - search
+  - rss:
+      date_from_meta:
+        as_creation: "date"
+        as_update: false
+        datetime_format: "%Y-%m-%d %H:%M"
+        default_timezone: "Europe/Paris"
+        default_time: "22:00"
+        abstract_chars_count: 160
+        abstract_delimiter: <!-- more -->
+        image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Feed-icon.svg/128px-Feed-icon.svg.png
+        match_path: ".*"
+        pretty_print: false
+      url_parameters:
+        utm_source: "documentation"
+        utm_medium: "RSS"
+        utm_campaign: "feed-syndication"
+  - blogging:
+      dirs: # The directories to be included
+        - blog
+  - mermaid2:
+  - build_plantuml:
+      render: "server"
+      bin_path: "/usr/local/bin/plantuml"
+      server: "http://www.plantuml.com/plantuml"
+      output_format: "svg"
+      diagram_root: "docs/diagrams"
+      output_folder: "out"
+      input_folder: "src"
+      theme_enabled: true
+      theme_folder: "include/themes"
+      theme_light: "light.puml"
+      theme_dark: "dark.puml"
+#   - markmap:
+#       base_path: docs
+#       encoding: utf-8
+#       file_extension: .mm.md
+#       d3_version: 6.7.0
+#       lib_version: 0.14.1
+#       view_version: 0.14.0 
+
+copyright: Copyright &copy; 2023 <a href="https://www.mkdocs.org/">MkDocs</a> <a class="fa fa-rss-square" href="https://www.likui.info/wiki/site/feed_rss_created.xml" target="_blank></a>.
+
+  
+
+# copyright: Copyright &copy; 2014 <a href="https://twitter.com/starletdreaming">Tom Christie</a>, Maintained by the <a href="/about/release-notes/#maintenance-team">MkDocs Team</a>.  
+ 
+ #<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/legalcode" target="_blank">协议</a>
+
+
+
+
+
+
+
+
+
+           

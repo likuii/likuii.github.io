@@ -1,23 +1,29 @@
 echo off
 
+
+
+
 rem  the path of the git command
 
 
 	set git = D:\Git\bin\git.exe
 
-	set d=%date:~0,2%
-	set mo=%date:~3,2%
-	set y=%date:~6,4%
+    set y=%date:~0,2%	
+	set mo=%date:~5,2%
+	set d=%date:~8,2%
+    rem set wek =%date:~10,6%  
 	set h=%time:~0,2%
-	set mi=%time:~3,2%
+	set mi=%time:~3,2%	
+	rem set sec = %time:~6,2%	
+    rem set milsec = %time:~9,2%
 
-	set upinfo = %y%_%mo%_%d%_%h%_%mi%
+	
 
 	git add *
-
+	rem git push --set-upstream origin master
 	REM delay 3 second
 	TIMEOUT /T 3	 
-	git commit -m  "update by likui"
+	git commit -m  "update"
 	REM delay 5 second
 	TIMEOUT /T 5	
 	git push
