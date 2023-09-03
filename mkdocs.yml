@@ -42,7 +42,8 @@ nav:
         - 电子基础: cs/电子基础.md
         - 数据结构与算法: cs/数据结构与算法.md
     - 收藏:
-        - 简悦: collect/目录.md       
+        - 简悦: collect/目录.md
+        - 精品嵌入式资源汇总: collect/01_精品嵌入式资源汇总.md
     - 阅读:
         - Reading: read/Reading.md
         - Books: read/Books.md
